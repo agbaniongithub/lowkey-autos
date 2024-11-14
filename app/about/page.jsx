@@ -37,7 +37,7 @@ export default function About() {
         >
           <h2 className="text-2xl font-semibold">Our Story</h2>
           <p className="text-gray-300 leading-relaxed">
-            Established over a decade ago, our dealership has been dedicated to providing top-quality vehicles and exceptional customer service. With a passion for cars and a commitment to our customers, we have grown into a trusted name in the industry, known for our transparency and professionalism.
+             Our dealership has been dedicated to providing top-quality vehicles and exceptional customer service. With a passion for cars and a commitment to our customers, we have grown into a trusted name in the industry, known for our transparency and professionalism.
           </p>
         </motion.div>
 
