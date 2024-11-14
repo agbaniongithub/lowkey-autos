@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="flex items-center space-x-3">
           <FaMapMarkerAlt size={24} className="text-primary" />
           <p className="leading-relaxed text-background">
-            123 Auto Avenue, Sabo, Yaba, Lagos, Nigeria
+            11 Commercial Avenue, Sabo, Yaba, Lagos, Nigeria
           </p>
         </div>
 

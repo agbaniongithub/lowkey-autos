@@ -48,7 +48,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center space-x-2">
               <FaMapMarkerAlt size={20} className="text-red-500" />
-              <span>123 Auto Avenue, Sabo, Yaba, Lagos, Nigeria</span>
+              <span>11 Commercial Avenue, Sabo, Yaba, Lagos, Nigeria</span>
             </div>
           </div>
         </motion.div>
