@@ -1,143 +1,72 @@
-'use client'
+"use client";
 
 // components/Main.tsx
-import { motion } from 'framer-motion';
-import { FaCar, FaHandshake, FaExchangeAlt } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+import Image from "next/image";
+
 
 export default function Main() {
   return (
-    <section className='relative min-h-screen bg-cover bg-center flex flex-col items-center text-white pt-[10rem] pb-[13rem]' style={{ backgroundImage: "url('/background.jpg')" }}>
+    <section className='relative min-h-screen bg-hero bg-cover bg-center flex flex-col items-center justify-center py-[10rem] text-white'
+    >
+
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80" />
 
       {/* Hero Section */}
       <motion.div
-        className="relative z-10 flex flex-col items-center text-center p-6"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          type: 'spring',
-          stiffness: 80,
-          damping: 20,
-          duration: 0.8,
-        }}
+        className="relative z-10 bg-gradient-to-br from-black via-gray-900 to-black border border-gray-700 rounded-xl shadow-2xl p-12 md:p-20 w-[90%] md:w-[70%] text-center"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
       >
+        {/* SVG Decorations */}
+        {/* <Image
+          height={1000}
+          width={1000}
+          src="/carone.svg"
+          alt="Luxury Car Left"
+          className="absolute bottom-10 left-[25%]"
+        /> */}
+        {/* <Image
+          height={100}
+          width={100}
+          src="/carone.svg"
+          alt="Luxury Car Right"
+          className="absolute -bottom-10 -right-10 w-24 md:w-[20rem] opacity-70"
+        /> */}
+
+        {/* Main Heading */}
         <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-4"
-          initial={{ opacity: 0, y: -30 }}
+          className="text-5xl md:text-7xl font-bold text-gold mb-4"
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 100,
-            damping: 15,
-            delay: 0.2,
-          }}
+          transition={{ delay: 0.3, duration: 1 }}
         >
           Discover Your Dream Car
         </motion.h1>
 
+        {/* Subheading */}
         <motion.p
-          className="text-lg md:text-2xl mb-8 font-light text-gray-200"
-          initial={{ opacity: 0, y: -20 }}
+          className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{
-            type: 'spring',
-            stiffness: 90,
-            damping: 20,
-            delay: 0.4,
-          }}
+          transition={{ delay: 0.5, duration: 1 }}
         >
-          Buy, Sell, and Swap Quality Cars
+          Luxury redefined. Explore our exclusive collection of premium cars to enhance your driving experience.
         </motion.p>
 
-        <motion.a
-          href="#showroom"
-          className="inline-block bg-primary hover:bg-primary/80 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: 'spring',
-            stiffness: 150,
-            damping: 15,
-            delay: 0.6,
-          }}
-        >
-          Visit Our Dealership Today
-        </motion.a>
-      </motion.div>
-
-      {/* Services Section */}
-      <motion.div
-        className="relative z-10 mt-16 grid gap-8 grid-cols-1 md:grid-cols-3 px-6 max-w-5xl text-center"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.2,
-            },
-          },
-        }}
-      >
-        {/* Buy Cars */}
+        {/* Call-to-Action Button */}
         <motion.div
-          className="bg-white/20 backdrop-blur-md p-6 rounded-lg"
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 80,
-            damping: 15,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 1 }}
         >
-          <FaCar size={40} className="mx-auto mb-4 text-primary" />
-          <h3 className="text-xl font-semibold mb-2">Buy a Car</h3>
-          <p className="text-gray-300">
-            Find your ideal car with our wide selection of quality vehicles at unbeatable prices.
-          </p>
-        </motion.div>
-
-        {/* Sell Cars */}
-        <motion.div
-          className="bg-white/20 backdrop-blur-md p-6 rounded-lg"
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 80,
-            damping: 15,
-          }}
-        >
-          <FaHandshake size={40} className="mx-auto mb-4 text-primary" />
-          <h3 className="text-xl font-semibold mb-2">Sell Your Car</h3>
-          <p className="text-gray-300">
-            Get the best deal when you sell your car to us, hassle-free and convenient.
-          </p>
-        </motion.div>
-
-        {/* Swap Cars */}
-        <motion.div
-          className="bg-white/20 backdrop-blur-md p-6 rounded-lg"
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 80,
-            damping: 15,
-          }}
-        >
-          <FaExchangeAlt size={40} className="mx-auto mb-4 text-primary" />
-          <h3 className="text-xl font-semibold mb-2">Swap a Car</h3>
-          <p className="text-gray-300">
-            Trade in your current vehicle for another from our extensive selection.
-          </p>
+          <Button className="px-8 py-4 bg-primary rounded-lg shadow-lg hover:bg-primary/80 transition-transform transform hover:scale-105">
+          <a href="#collection">
+            Explore Our Collection
+          </a>
+          </Button>
         </motion.div>
       </motion.div>
     </section>
