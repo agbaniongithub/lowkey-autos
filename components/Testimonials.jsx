@@ -24,13 +24,13 @@ const Testimonials = () => {
   return (
     <section id='testimonial' className="bg-background pt-20 min-h-screen bg-cover bg-center text-background pb-[13rem]">
       <h2 className="text-5xl font-extrabold text-center mb-16 text-muted-foreground tracking-wider px-2">
-        Testimonials from Our Customers
+        Customer Testimonials
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-6 md:px-20">
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="testimonial-item bg-gradient-to-bl from-blue-900 via-teal-800 to-blue-700 p-8 rounded-xl shadow-2xl backdrop-blur-xl hover:scale-105 transition-all duration-300"
+            className="block bg-gradient-to-bl from-blue-900 via-teal-800 to-blue-700 p-8 rounded-xl shadow-2xl backdrop-blur-xl hover:scale-105 transition-all duration-300"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.3, duration: 0.8 }}
@@ -38,7 +38,7 @@ const Testimonials = () => {
             <iframe
               src={testimonial.videoSrc}
               width="100%"
-              height="300"
+              height="500"
               frameBorder="0"
               scrolling="no"
               allow="encrypted-media"
