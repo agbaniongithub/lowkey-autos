@@ -37,7 +37,7 @@ export default function Header() {
             href="#collection"
             className="flex items-center hover:text-primary transition duration-200"
           >
-            <span>Garage</span>
+            <span>Collection</span>
           </Link>
           <Link
             href="#testimonial"

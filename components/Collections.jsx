@@ -3,28 +3,46 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import { Button } from "./ui/button";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const cars = [
   {
-    name: "2018 Toyota Corolla",
-    image: "/corollacar.png",
-    description: "Reliability, good fuel economy, and spacious interior.",
-    price: '12,000,000',
+    name: "Toyota Camry Sport 2012",
+    images: [
+      "/car1/camry1.jpg",
+      "/car1/camry2.jpg",
+      "/car1/camry3.jpg",
+      "/car1/camry4.jpg",
+      "/car1/camry5.jpg",
+      "/car1/camry6.jpg",
+    ],
+    description: "V4 engine with Thumbstart Registered in Pristine condition",
+    price: "12.5M",
   },
   {
-    name: "2018 Lexus RX300",
-    image: "/lexuscar.png",
-    description: "Luxury and sophistication in every detail.",
-    price: "17,000,000",
+    name: "2016 Lexus RX350",
+    images: [
+      "/car2/lexus2.jpg",
+      "/car2/lexus3.jpg",
+      "/car2/lexus4.jpg",
+      "/car2/lexus5.jpg",
+    ],
+    description: "Registered, Barely Used. Full Option.",
+    price: "36M",
   },
 ];
 
 const Collections = () => {
   return (
-    <section id='collection'className="bg-background bg-cover bg-center text-background">
+    <section id="collection" className="bg-background bg-cover bg-center text-background">
       <h2 className="text-5xl font-extrabold text-center mb-16 text-muted-foreground tracking-wider px-2">
-        Our Exclusive Collection
+        Our Collection
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-6 md:px-20">
         {cars.map((car, index) => (
@@ -36,13 +54,25 @@ const Collections = () => {
             transition={{ delay: index * 0.3, duration: 0.8 }}
           >
             <div className="overflow-hidden rounded-lg">
-              <Image
-                src={car.image}
-                alt={car.name}
-                width={400}
-                height={300}
-                className="rounded-lg group-hover:scale-110 transition-all duration-500"
-              />
+              <Swiper
+                modules={[Navigation, Pagination]}
+                navigation
+                pagination={{ clickable: true }}
+                loop={true}
+                className="rounded-lg"
+              >
+                {car.images.map((image, i) => (
+                  <SwiperSlide key={i}>
+                    <Image
+                      src={image}
+                      alt={`${car.name} - image ${i + 1}`}
+                      width={400}
+                      height={300}
+                      className="rounded-lg w-full h-auto"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
             <div className="mt-6 text-center">
               <h3 className="text-3xl font-bold mb-2 text-gold">{car.name}</h3>
