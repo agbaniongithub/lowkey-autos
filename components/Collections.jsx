@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 
 const cars = [
   {
-    name: "Toyota Camry Sport 2012",
+    name: " 2012 Toyota Camry Sport",
     images: [
       "/car1/camry1.jpg",
       "/car1/camry2.jpg",
@@ -50,6 +50,33 @@ const cars = [
     ],
     description: "V4 engine with thumbstart. Registered in pristine condition",
     price: "12.5M",
+  },
+  {
+    name: "2013 Toyota Camry SE",
+    images: [
+      "/car4/camry1.jpg",
+      "/car4/camry2.jpg",
+      "/car4/camry3.jpg",
+      "/car4/camry4.jpg",
+      "/car4/camry5.jpg",
+    ],
+    description: "V4 engine with thumbstart. Registered in pristine condition",
+    price: "11.5M",
+  },
+  {
+    name: "2015 Lexus IS250 F Sport",
+    images: [
+      "/car5/lexus1.jpg",
+      "/car5/lexus2.jpg",
+      "/car5/lexus3.jpg",
+      "/car5/lexus4.jpg",
+      "/car5/lexus5.jpg",
+      "/car5/lexus6.jpg",
+      "/car5/lexus7.jpg",
+
+    ],
+    description: "V6 engine with thumbstart. Turbo Exhaust",
+    price: "22M",
   },
 ];
 
