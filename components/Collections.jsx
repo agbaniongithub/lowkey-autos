@@ -36,6 +36,21 @@ const cars = [
     description: "Registered, Barely Used. Full Option.",
     price: "36M",
   },
+  {
+    name: "2013 Toyota Camry Sport",
+    images: [
+      "/car3/camry1.jpg",
+      "/car3/camry2.jpg",
+      "/car3/camry3.jpg",
+      "/car3/camry4.jpg",
+      "/car3/camry5.jpg",
+      "/car3/camry6.jpg",
+      "/car3/camry7.jpg",
+      "/car3/camry8.jpg",
+    ],
+    description: "V4 engine with thumbstart. Registered in pristine condition",
+    price: "12.5M",
+  },
 ];
 
 const Collections = () => {
