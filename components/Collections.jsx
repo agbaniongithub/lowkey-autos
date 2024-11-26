@@ -6,10 +6,17 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Button } from "./ui/button";
+import { Cormorant_Garamond } from "next/font/google";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
+const playfairDisplay = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Specify the weights you need
+  display: "swap",
+});
 
 const cars = [
   {
@@ -80,10 +87,12 @@ const cars = [
   },
 ];
 
+
+
 const Collections = () => {
   return (
     <section id="collection" className="bg-background bg-cover bg-center text-background">
-      <h2 className="text-5xl font-extrabold text-center mb-16 text-muted-foreground tracking-wider px-2">
+      <h2 className={`text-5xl font-bold text-center mb-16 text-muted-foreground tracking-wider px-2`}>
         Our Collection
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 px-6 md:px-20">
